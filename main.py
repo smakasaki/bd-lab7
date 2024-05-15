@@ -4,6 +4,7 @@ from helper import Helper
 from models import ClubRepository
 from services import DataImporter, DataExporter
 
+
 def main_menu():
     signal.signal(signal.SIGINT, Helper.signal_handler)
     Helper.delete_exported_files()
@@ -11,7 +12,7 @@ def main_menu():
     while True:
         Helper.print_menu()
         choice = input("Введите номер действия: ")
-        
+
         if choice == '1':
             Database.print_version()
         elif choice == '2':
@@ -30,19 +31,23 @@ def main_menu():
             ClubRepository.handle_exception()
         elif choice == '9':
             DataExporter.export_to_csv()
-        elif choice == '10':
             DataImporter.import_from_csv()
-        elif choice == '11':
+        elif choice == '10':
             DataExporter.export_to_excel()
             DataImporter.import_from_excel()
-        elif choice == '12':
+        elif choice == '11':
+            DataExporter.export_to_json()
             DataImporter.import_from_json()
+        elif choice == '12':
+            DataExporter.export_to_xml()
+            DataImporter.import_from_xml()
         elif choice == '0':
             print("Выход из программы...")
             Database.close_connection()
             break
         else:
             print("Неверный выбор. Пожалуйста, введите номер из списка.")
+
 
 if __name__ == "__main__":
     main_menu()

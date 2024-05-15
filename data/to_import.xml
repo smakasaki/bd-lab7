@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Books>
+    <Book>
+        <Name>Убить пересмешника</Name>
+        <Author>Харпер Ли</Author>
+        <Year>1960</Year>
+        <Pages>281</Pages>
+    </Book>
+    <Book>
+        <Name>1984</Name>
+        <Author>Джордж Оруэлл</Author>
+        <Year>1949</Year>
+        <Pages>328</Pages>
+    </Book>
+    <Book>
+        <Name>Великий Гэтсби</Name>
+        <Author>Фрэнсис Скотт Фицджеральд</Author>
+        <Year>1925</Year>
+        <Pages>218</Pages>
+    </Book>
+</Books>

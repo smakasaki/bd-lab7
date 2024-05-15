@@ -1,5 +1,6 @@
 import pyodbc
 
+
 class Database:
     conn = None
 
